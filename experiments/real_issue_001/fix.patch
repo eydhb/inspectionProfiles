@@ -1,0 +1,33 @@
+diff --git a/jwt/api_jwt.py b/jwt/api_jwt.py
+index da9d481..5e11bc8 100644
+--- a/jwt/api_jwt.py
++++ b/jwt/api_jwt.py
+@@ -71,10 +71,8 @@ class PyJWT:
+         options: Optional[Dict] = None,
+         **kwargs,
+     ) -> Dict[str, Any]:
+-        if options is None:
+-            options = {"verify_signature": True}
+-        else:
+-            options.setdefault("verify_signature", True)
++        options = dict(options or {})  # shallow-copy or initialize an empty dict
++        options.setdefault("verify_signature", True)
+ 
+         # If the user has set the legacy `verify` argument, and it doesn't match
+         # what the relevant `options` entry for the argument is, inform the user
+diff --git a/tests/test_api_jwt.py b/tests/test_api_jwt.py
+index 57cc4ae..84e41e0 100644
+--- a/tests/test_api_jwt.py
++++ b/tests/test_api_jwt.py
+@@ -674,3 +674,11 @@ class TestJWT:
+             jwt.decode(
+                 jwt_message, secret, verify=True, options={"verify_signature": False}
+             )
++
++    def test_decode_no_options_mutation(self, jwt, payload):
++        options = {"verify_signature": True}
++        orig_options = options.copy()
++        secret = "secret"
++        jwt_message = jwt.encode(payload, secret)
++        jwt.decode(jwt_message, secret, options=options, algorithms=["HS256"])
++        assert options == orig_options

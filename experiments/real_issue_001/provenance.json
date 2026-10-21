@@ -1,0 +1,36 @@
+{
+  "source_urls": {
+    "issue": "https://github.com/jpadilla/pyjwt/issues/679",
+    "pull_request": "https://github.com/jpadilla/pyjwt/pull/743",
+    "fix_commit": "https://github.com/jpadilla/pyjwt/commit/3d4d82248f1120c87f1f4e0e8793eaa1d54843a6"
+  },
+  "issue": {
+    "number": 679,
+    "title": "PyJWT.decode_complete() method changing provided options object ",
+    "created_at": "2021-08-10T15:16:25Z",
+    "updated_at": "2022-04-05T17:18:22Z",
+    "closed_at": "2022-04-05T17:18:22Z",
+    "state": "closed"
+  },
+  "pull_request": {
+    "number": 743,
+    "title": "Don't mutate options dictionary in .decode_complete()",
+    "merged": true,
+    "merged_at": "2022-04-05T17:18:22Z",
+    "merge_commit_sha": "3d4d82248f1120c87f1f4e0e8793eaa1d54843a6",
+    "explicit_issue_reference": "Fixes #679",
+    "commit_count": 1,
+    "changed_files": 2
+  },
+  "fix": {
+    "sha": "3d4d82248f1120c87f1f4e0e8793eaa1d54843a6",
+    "message": "Don't mutate options dictionary in .decode_complete() (#743)\n\nFixes #679",
+    "files": [
+      "jwt/api_jwt.py",
+      "tests/test_api_jwt.py"
+    ]
+  },
+  "selection_notes": "A Flask-Login candidate could not be established from its referenced PR. PyJWT #679 was the first selected and only localized case. Selection was completed before any Agent run.",
+  "preparation_notes": "First archive export failed byte validation due to Git for Windows CRLF conversion before analyze() was called. A fresh snapshot with core.autocrlf=false passed validation; one primary Agent run followed.",
+  "audit_notes": "Search audit replays individual read-only search tools after the raw result was saved; it does not invoke analyze() or alter candidate ranks. Before/after behavioral reproduction was also performed after scoring."
+}

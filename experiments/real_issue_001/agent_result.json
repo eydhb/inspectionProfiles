@@ -1,0 +1,523 @@
+{
+  "summary": "找到 6 个候选文件。依据来自实际搜索和读取；尚未确认本次 500 的根因。",
+  "candidates": [
+    {
+      "path": "jwt/algorithms.py",
+      "start_line": 116,
+      "end_line": 139,
+      "reason": "命中与问题有关的关键词或已读代码中的关联符号；已读取以下片段，需要结合调用路径确认相关性。",
+      "evidence": [
+        {
+          "line": 116,
+          "text": "        \"\"\""
+        },
+        {
+          "line": 117,
+          "text": "        raise NotImplementedError"
+        },
+        {
+          "line": 118,
+          "text": ""
+        },
+        {
+          "line": 123,
+          "text": "        \"\"\""
+        },
+        {
+          "line": 124,
+          "text": "        raise NotImplementedError"
+        },
+        {
+          "line": 125,
+          "text": ""
+        },
+        {
+          "line": 130,
+          "text": "        \"\"\""
+        },
+        {
+          "line": 131,
+          "text": "        raise NotImplementedError"
+        },
+        {
+          "line": 132,
+          "text": ""
+        },
+        {
+          "line": 137,
+          "text": "        \"\"\""
+        },
+        {
+          "line": 138,
+          "text": "        raise NotImplementedError"
+        },
+        {
+          "line": 139,
+          "text": ""
+        }
+      ],
+      "pending": [
+        "核对报错堆栈是否经过此处，并检查当前请求触发的分支。"
+      ],
+      "score": 13
+    },
+    {
+      "path": "jwt/api_jws.py",
+      "start_line": 47,
+      "end_line": 105,
+      "reason": "命中与问题有关的关键词或已读代码中的关联符号；已读取以下片段，需要结合调用路径确认相关性。",
+      "evidence": [
+        {
+          "line": 47,
+          "text": "        if alg_id in self._algorithms:"
+        },
+        {
+          "line": 48,
+          "text": "            raise ValueError(\"Algorithm already has a handler.\")"
+        },
+        {
+          "line": 49,
+          "text": ""
+        },
+        {
+          "line": 50,
+          "text": "        if not isinstance(alg_obj, Algorithm):"
+        },
+        {
+          "line": 51,
+          "text": "            raise TypeError(\"Object is not of type `Algorithm`\")"
+        },
+        {
+          "line": 52,
+          "text": ""
+        },
+        {
+          "line": 61,
+          "text": "        if alg_id not in self._algorithms:"
+        },
+        {
+          "line": 62,
+          "text": "            raise KeyError("
+        },
+        {
+          "line": 63,
+          "text": "                \"The specified algorithm could not be removed\""
+        },
+        {
+          "line": 103,
+          "text": "        if headers:"
+        },
+        {
+          "line": 104,
+          "text": "            self._validate_headers(headers)"
+        },
+        {
+          "line": 105,
+          "text": "            header.update(headers)"
+        }
+      ],
+      "pending": [
+        "核对报错堆栈是否经过此处，并检查当前请求触发的分支。"
+      ],
+      "score": 13
+    },
+    {
+      "path": "jwt/api_jwt.py",
+      "start_line": 47,
+      "end_line": 99,
+      "reason": "命中与问题有关的关键词或已读代码中的关联符号；已读取以下片段，需要结合调用路径确认相关性。",
+      "evidence": [
+        {
+          "line": 47,
+          "text": "        if not isinstance(payload, Mapping):"
+        },
+        {
+          "line": 48,
+          "text": "            raise TypeError("
+        },
+        {
+          "line": 49,
+          "text": "                \"Expecting a mapping object, as JWT only supports \""
+        },
+        {
+          "line": 97,
+          "text": "        if options[\"verify_signature\"] and not algorithms:"
+        },
+        {
+          "line": 98,
+          "text": "            raise DecodeError("
+        },
+        {
+          "line": 99,
+          "text": "                'It is required that you pass in a value for the \"algorithms\" argument when calling decode().'"
+        }
+      ],
+      "pending": [
+        "核对报错堆栈是否经过此处，并检查当前请求触发的分支。"
+      ],
+      "score": 13
+    },
+    {
+      "path": "docs/conf.py",
+      "start_line": 82,
+      "end_line": 119,
+      "reason": "命中与问题有关的关键词或已读代码中的关联符号；已读取以下片段，需要结合调用路径确认相关性。",
+      "evidence": [
+        {
+          "line": 82,
+          "text": "todo_include_todos = False"
+        },
+        {
+          "line": 89,
+          "text": "# -- Options for HTML output ----------------------------------------------"
+        },
+        {
+          "line": 112,
+          "text": "# -- Options for manual page output ---------------------------------------"
+        },
+        {
+          "line": 119,
+          "text": "# -- Options for Texinfo output -------------------------------------------"
+        }
+      ],
+      "pending": [
+        "核对报错堆栈是否经过此处，并检查当前请求触发的分支。"
+      ],
+      "score": 9
+    },
+    {
+      "path": "CHANGELOG.rst",
+      "start_line": 7,
+      "end_line": 68,
+      "reason": "命中与问题有关的关键词或已读代码中的关联符号；已读取以下片段，需要结合调用路径确认相关性。",
+      "evidence": [
+        {
+          "line": 7,
+          "text": "`Unreleased <https://github.com/jpadilla/pyjwt/compare/2.3.0...HEAD>`__"
+        },
+        {
+          "line": 19,
+          "text": "- Add ``PyJWKSet.__getitem__`` for indexing keysets by key ID `#725 <https://github.com/jpadilla/pyjwt/pull/725>`__"
+        },
+        {
+          "line": 21,
+          "text": "`v2.3.0 <https://github.com/jpadilla/pyjwt/compare/2.2.0...2.3.0>`__"
+        },
+        {
+          "line": 27,
+          "text": "- Revert \"Remove arbitrary kwargs.\" `#701 <https://github.com/jpadilla/pyjwt/pull/701>`__"
+        },
+        {
+          "line": 32,
+          "text": "- Add exception chaining `#702 <https://github.com/jpadilla/pyjwt/pull/702>`__"
+        },
+        {
+          "line": 34,
+          "text": "`v2.2.0 <https://github.com/jpadilla/pyjwt/compare/2.1.0...2.2.0>`__"
+        },
+        {
+          "line": 40,
+          "text": "- Remove arbitrary kwargs. `#657 <https://github.com/jpadilla/pyjwt/pull/657>`__"
+        },
+        {
+          "line": 41,
+          "text": "- Use timezone package as Python 3.5+ is required. `#694 <https://github.com/jpadilla/pyjwt/pull/694>`__"
+        },
+        {
+          "line": 45,
+          "text": "- Assume JWK without the \"use\" claim is valid for signing as per RFC7517 `#668 <https://github.com/jpadilla/pyjwt/pull/668>`__"
+        },
+        {
+          "line": 46,
+          "text": "- Prefer `headers[\"alg\"]` to `algorithm` in `jwt.encode()`. `#673 <https://github.com/jpadilla/pyjwt/pull/673>`__"
+        },
+        {
+          "line": 47,
+          "text": "- Fix aud validation to support {'aud': null} case. `#670 <https://github.com/jpadilla/pyjwt/pull/670>`__"
+        },
+        {
+          "line": 48,
+          "text": "- Make `typ` optional in JWT to be compliant with RFC7519. `#644 <https://github.com/jpadilla/pyjwt/pull/644>`__"
+        },
+        {
+          "line": 49,
+          "text": "-  Remove upper bound on cryptography version. `#693 <https://github.com/jpadilla/pyjwt/pull/693>`__"
+        },
+        {
+          "line": 54,
+          "text": "- Add support for Ed448/EdDSA. `#675 <https://github.com/jpadilla/pyjwt/pull/675>`__"
+        },
+        {
+          "line": 56,
+          "text": "`v2.1.0 <https://github.com/jpadilla/pyjwt/compare/2.0.1...2.1.0>`__"
+        },
+        {
+          "line": 62,
+          "text": "- Allow claims validation without making JWT signature validation mandatory. `#608 <https://github.com/jpadilla/pyjwt/pull/608>`__"
+        },
+        {
+          "line": 67,
+          "text": "- Remove padding from JWK test data. `#628 <https://github.com/jpadilla/pyjwt/pull/628>`__"
+        },
+        {
+          "line": 68,
+          "text": "- Make `kty` mandatory in JWK to be compliant with RFC7517. `#624 <https://github.com/jpadilla/pyjwt/pull/624>`__"
+        }
+      ],
+      "pending": [
+        "核对报错堆栈是否经过此处，并检查当前请求触发的分支。"
+      ],
+      "score": 8
+    },
+    {
+      "path": "docs/api.rst",
+      "start_line": 23,
+      "end_line": 105,
+      "reason": "命中与问题有关的关键词或已读代码中的关联符号；已读取以下片段，需要结合调用路径确认相关性。",
+      "evidence": [
+        {
+          "line": 23,
+          "text": ".. function:: decode(jwt, key=\"\", algorithms=None, options=None, audience=None, issuer=None, leeway=0)"
+        },
+        {
+          "line": 27,
+          "text": "    :param str jwt: the token to be decoded"
+        },
+        {
+          "line": 45,
+          "text": "    :param dict options: extended decoding and validation options"
+        },
+        {
+          "line": 47,
+          "text": "        * ``verify_signature=True`` verify the JWT cryptographic signature"
+        },
+        {
+          "line": 51,
+          "text": "        * ``verify_aud=verify_signature`` check that ``aud`` (audience) claim matches ``audience``"
+        },
+        {
+          "line": 52,
+          "text": "        * ``verify_iss=verify_signature`` check that ``iss`` (issuer) claim matches ``issuer``"
+        },
+        {
+          "line": 53,
+          "text": "        * ``verify_exp=verify_signature`` check that ``exp`` (expiration) claim value is in the future"
+        },
+        {
+          "line": 54,
+          "text": "        * ``verify_iat=verify_signature`` check that ``iat`` (issued at) claim value is an integer"
+        },
+        {
+          "line": 55,
+          "text": "        * ``verify_nbf=verify_signature`` check that ``nbf`` (not before) claim value is in the past"
+        },
+        {
+          "line": 65,
+          "text": "    :param Iterable audience: optional, the value for ``verify_aud`` check"
+        },
+        {
+          "line": 73,
+          "text": ".. function:: decode_complete(jwt, key=\"\", algorithms=None, options=None, audience=None, issuer=None, leeway=0)"
+        },
+        {
+          "line": 75,
+          "text": "    Identical to ``jwt.decode`` except for return value which is a dictionary containing the token header (JOSE Header),"
+        },
+        {
+          "line": 79,
+          "text": "    :param str jwt: the token to be decoded"
+        },
+        {
+          "line": 97,
+          "text": "    :param dict options: extended decoding and validation options"
+        },
+        {
+          "line": 99,
+          "text": "        * ``verify_signature=True`` verify the JWT cryptographic signature"
+        },
+        {
+          "line": 103,
+          "text": "        * ``verify_aud=verify_signature`` check that ``aud`` (audience) claim matches ``audience``"
+        },
+        {
+          "line": 104,
+          "text": "        * ``verify_iss=verify_signature`` check that ``iss`` (issuer) claim matches ``issuer``"
+        },
+        {
+          "line": 105,
+          "text": "        * ``verify_exp=verify_signature`` check that ``exp`` (expiration) claim value is in the future"
+        }
+      ],
+      "pending": [
+        "核对报错堆栈是否经过此处，并检查当前请求触发的分支。"
+      ],
+      "score": 8
+    }
+  ],
+  "pending": [
+    "提供本次失败请求的异常类型与完整堆栈。",
+    "核对接口路径、请求参数、令牌状态及复现步骤。",
+    "结合全局异常处理和运行配置验证 HTTP 500 的产生位置。"
+  ],
+  "issue": "PyJWT.decode_complete() 会修改调用者传入的 options 字典。预期调用 jwt.decode 后，options 保持 {'verify_signature': False, 'verify_aud': False}；实际会额外增加 verify_exp、verify_nbf、verify_iat、verify_iss 等字段。请定位导致调用参数被修改的代码。",
+  "mode": "offline",
+  "engine": "LangGraph",
+  "trace": [
+    {
+      "tool": "list_repo_files",
+      "args": {},
+      "result_count": 63
+    },
+    {
+      "tool": "search_code",
+      "args": {
+        "query": "PyJWT"
+      },
+      "result_count": 40
+    },
+    {
+      "tool": "search_code",
+      "args": {
+        "query": "decode_complete"
+      },
+      "result_count": 11
+    },
+    {
+      "tool": "search_code",
+      "args": {
+        "query": "options"
+      },
+      "result_count": 40
+    },
+    {
+      "tool": "search_code",
+      "args": {
+        "query": "jwt"
+      },
+      "result_count": 40
+    },
+    {
+      "tool": "search_code",
+      "args": {
+        "query": "decode"
+      },
+      "result_count": 40
+    },
+    {
+      "tool": "search_code",
+      "args": {
+        "query": "verify_signature"
+      },
+      "result_count": 40
+    },
+    {
+      "tool": "search_code",
+      "args": {
+        "query": "False"
+      },
+      "result_count": 40
+    },
+    {
+      "tool": "search_code",
+      "args": {
+        "query": "verify_aud"
+      },
+      "result_count": 8
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "jwt/api_jws.py",
+        "start_line": 12,
+        "end_line": 111
+      },
+      "result_count": 100
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "jwt/api_jwt.py",
+        "start_line": 9,
+        "end_line": 108
+      },
+      "result_count": 100
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "jwt/algorithms.py",
+        "start_line": 43,
+        "end_line": 142
+      },
+      "result_count": 100
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "docs/conf.py",
+        "start_line": 70,
+        "end_line": 169
+      },
+      "result_count": 65
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "CHANGELOG.rst",
+        "start_line": 1,
+        "end_line": 100
+      },
+      "result_count": 100
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "docs/api.rst",
+        "start_line": 11,
+        "end_line": 110
+      },
+      "result_count": 100
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "jwt/jwks_client.py",
+        "start_line": 1,
+        "end_line": 100
+      },
+      "result_count": 59
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "AUTHORS.rst",
+        "start_line": 1,
+        "end_line": 100
+      },
+      "result_count": 7
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "tests/test_api_jws.py",
+        "start_line": 61,
+        "end_line": 160
+      },
+      "result_count": 100
+    },
+    {
+      "tool": "read_file",
+      "args": {
+        "path": "jwt/utils.py",
+        "start_line": 65,
+        "end_line": 164
+      },
+      "result_count": 35
+    }
+  ],
+  "warnings": [
+    "当前为规则检索演示：使用关键词和符号关联，不是大模型语义推理，也不是完整调用图。",
+    "部分文件列表或搜索结果达到上限；结果不是全仓库穷尽分析。"
+  ],
+  "elapsed_ms": 453
+}

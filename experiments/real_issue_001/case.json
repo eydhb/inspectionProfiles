@@ -1,0 +1,24 @@
+{
+  "experiment_id": "real_issue_001",
+  "issue_url": "https://github.com/jpadilla/pyjwt/issues/679",
+  "issue_title": "PyJWT.decode_complete() method changing provided options object",
+  "repository_url": "https://github.com/jpadilla/pyjwt.git",
+  "before_commit": "1f1fe15bb41846c602b3e106176b2c692b93a613",
+  "fix_commit": "3d4d82248f1120c87f1f4e0e8793eaa1d54843a6",
+  "fix_pr_url": "https://github.com/jpadilla/pyjwt/pull/743",
+  "agent_commit": "3eddd1f77132e9a0fad87defb908b4a6e588b96d",
+  "mode": "offline",
+  "input_file": "input.txt",
+  "prompt_transformation": "Chinese symptom-only paraphrase of the issue title, expected behavior, and actual behavior; retain API and options keys; omit the issue's source filename, source excerpt, solution suggestion, PR, and later comments.",
+  "selection_rule": "Small Python repository; an original bug issue explicitly linked to a merged single-commit repair; narrow production diff and a self-contained mutation reproduction. Selected before any CodeLens localization run.",
+  "evaluation_protocol": {
+    "primary_attempts": 1,
+    "ranking": "Original candidate order, deduplicate exact repository-relative paths without reranking",
+    "ground_truth": "Production Python source files modified by this fix; test changes are recorded separately",
+    "top_k_rule": "any(candidate_path in ground_truth for candidate_path in candidates[:k])",
+    "k": [1, 3],
+    "tie_handling": "Use the agent's actual returned order, no manual tie-breaking",
+    "no_adaptation": "Do not change agent code, weights, query text, or budgets after observing the result",
+    "snapshot_isolation": "Agent sees only a clean git-archive export of before_commit; history, fixed tree, experiment files and fix diff stay outside its repository root"
+  }
+}

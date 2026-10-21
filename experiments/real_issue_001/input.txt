@@ -1,0 +1,1 @@
+PyJWT.decode_complete() 会修改调用者传入的 options 字典。预期调用 jwt.decode 后，options 保持 {'verify_signature': False, 'verify_aud': False}；实际会额外增加 verify_exp、verify_nbf、verify_iat、verify_iss 等字段。请定位导致调用参数被修改的代码。

@@ -1,0 +1,31 @@
+{
+  "metric": "exact-path any-hit at k",
+  "sample_count": 1,
+  "ground_truth_production_files": [
+    "jwt/api_jwt.py"
+  ],
+  "changed_test_files": [
+    "tests/test_api_jwt.py"
+  ],
+  "all_changed_files": [
+    "jwt/api_jwt.py",
+    "tests/test_api_jwt.py"
+  ],
+  "candidate_paths_in_original_order": [
+    "jwt/algorithms.py",
+    "jwt/api_jws.py",
+    "jwt/api_jwt.py",
+    "docs/conf.py",
+    "CHANGELOG.rst",
+    "docs/api.rst"
+  ],
+  "first_relevant_rank": 3,
+  "top_1_hit": false,
+  "top_3_hit": true,
+  "top_1_matches": [],
+  "top_3_matches": [
+    "jwt/api_jwt.py"
+  ],
+  "verified_evidence_rows": 70,
+  "note": "Single-case file localization, not line localization, root-cause accuracy, or population accuracy."
+}

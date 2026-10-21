@@ -1,0 +1,224 @@
+{
+  "kind": "Post-run trace audit, not a second Agent attempt",
+  "searches": [
+    {
+      "query": "PyJWT",
+      "returned_matches": 40,
+      "truncated": true,
+      "matches_per_file": {
+        ".github/ISSUE_TEMPLATE.md": 1,
+        ".github/ISSUE_TEMPLATE/Bug.md": 1,
+        ".github/ISSUE_TEMPLATE/Custom.md": 2,
+        "AUTHORS.rst": 2,
+        "CHANGELOG.rst": 34
+      }
+    },
+    {
+      "query": "decode_complete",
+      "returned_matches": 11,
+      "truncated": false,
+      "matches_per_file": {
+        "docs/api.rst": 1,
+        "jwt/api_jws.py": 3,
+        "jwt/api_jwt.py": 4,
+        "jwt/jwks_client.py": 1,
+        "tests/test_api_jws.py": 1,
+        "tests/test_api_jwt.py": 1
+      }
+    },
+    {
+      "query": "options",
+      "returned_matches": 40,
+      "truncated": true,
+      "matches_per_file": {
+        "CHANGELOG.rst": 11,
+        "docs/api.rst": 4,
+        "docs/conf.py": 3,
+        "docs/usage.rst": 4,
+        "jwt/api_jws.py": 12,
+        "jwt/api_jwt.py": 6
+      }
+    },
+    {
+      "query": "jwt",
+      "returned_matches": 40,
+      "truncated": true,
+      "matches_per_file": {
+        ".github/ISSUE_TEMPLATE.md": 3,
+        ".github/ISSUE_TEMPLATE/Bug.md": 3,
+        ".github/ISSUE_TEMPLATE/Custom.md": 2,
+        ".github/workflows/main.yml": 1,
+        "AUTHORS.rst": 2,
+        "CHANGELOG.rst": 29
+      }
+    },
+    {
+      "query": "decode",
+      "returned_matches": 40,
+      "truncated": true,
+      "matches_per_file": {
+        "CHANGELOG.rst": 27,
+        "docs/algorithms.rst": 2,
+        "docs/api.rst": 9,
+        "docs/index.rst": 2
+      }
+    },
+    {
+      "query": "verify_signature",
+      "returned_matches": 40,
+      "truncated": true,
+      "matches_per_file": {
+        "CHANGELOG.rst": 1,
+        "docs/api.rst": 12,
+        "docs/usage.rst": 2,
+        "jwt/api_jws.py": 6,
+        "jwt/api_jwt.py": 7,
+        "jwt/jwks_client.py": 1,
+        "tests/test_api_jws.py": 11
+      }
+    },
+    {
+      "query": "False",
+      "returned_matches": 40,
+      "truncated": true,
+      "matches_per_file": {
+        "CHANGELOG.rst": 4,
+        "codecov.yml": 1,
+        "docs/conf.py": 1,
+        "docs/usage.rst": 3,
+        "jwt/algorithms.py": 8,
+        "jwt/api_jws.py": 5,
+        "jwt/api_jwt.py": 6,
+        "jwt/jwks_client.py": 1,
+        "jwt/utils.py": 1,
+        "setup.cfg": 1,
+        "tests/test_algorithms.py": 5,
+        "tests/test_api_jws.py": 4
+      }
+    },
+    {
+      "query": "verify_aud",
+      "returned_matches": 8,
+      "truncated": false,
+      "matches_per_file": {
+        "docs/api.rst": 4,
+        "jwt/api_jwt.py": 3,
+        "tests/test_api_jwt.py": 1
+      }
+    }
+  ],
+  "score_audit": [
+    {
+      "path": "jwt/algorithms.py",
+      "unique_matched_lines": 8,
+      "score": 13,
+      "displayed_evidence_lines": [
+        116,
+        117,
+        118,
+        123,
+        124,
+        125,
+        130,
+        131,
+        132,
+        137,
+        138,
+        139
+      ]
+    },
+    {
+      "path": "jwt/api_jws.py",
+      "unique_matched_lines": 24,
+      "score": 13,
+      "displayed_evidence_lines": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        61,
+        62,
+        63,
+        103,
+        104,
+        105
+      ]
+    },
+    {
+      "path": "jwt/api_jwt.py",
+      "unique_matched_lines": 24,
+      "score": 13,
+      "displayed_evidence_lines": [
+        47,
+        48,
+        49,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "path": "docs/conf.py",
+      "unique_matched_lines": 4,
+      "score": 9,
+      "displayed_evidence_lines": [
+        82,
+        89,
+        112,
+        119
+      ]
+    },
+    {
+      "path": "CHANGELOG.rst",
+      "unique_matched_lines": 64,
+      "score": 8,
+      "displayed_evidence_lines": [
+        7,
+        19,
+        21,
+        27,
+        32,
+        34,
+        40,
+        41,
+        45,
+        46,
+        47,
+        48,
+        49,
+        54,
+        56,
+        62,
+        67,
+        68
+      ]
+    },
+    {
+      "path": "docs/api.rst",
+      "unique_matched_lines": 25,
+      "score": 8,
+      "displayed_evidence_lines": [
+        23,
+        27,
+        45,
+        47,
+        51,
+        52,
+        53,
+        54,
+        55,
+        65,
+        73,
+        75,
+        79,
+        97,
+        99,
+        103,
+        104,
+        105
+      ]
+    }
+  ]
+}

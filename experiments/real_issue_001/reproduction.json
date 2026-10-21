@@ -1,0 +1,49 @@
+{
+  "before": {
+    "module": "jwt/__init__.py",
+    "package_version_string": "2.3.0",
+    "options_before": {
+      "verify_signature": false,
+      "verify_aud": false
+    },
+    "options_after": {
+      "verify_signature": false,
+      "verify_aud": false,
+      "verify_exp": false,
+      "verify_nbf": false,
+      "verify_iat": false,
+      "verify_iss": false
+    },
+    "added_keys": [
+      "verify_exp",
+      "verify_iat",
+      "verify_iss",
+      "verify_nbf"
+    ],
+    "payload_decoded_correctly": true,
+    "expected": "The caller's options dictionary remains unchanged",
+    "passed": false,
+    "exit_code": 1,
+    "commit": "1f1fe15bb41846c602b3e106176b2c692b93a613",
+    "stderr": ""
+  },
+  "after": {
+    "module": "jwt/__init__.py",
+    "package_version_string": "2.3.0",
+    "options_before": {
+      "verify_signature": false,
+      "verify_aud": false
+    },
+    "options_after": {
+      "verify_signature": false,
+      "verify_aud": false
+    },
+    "added_keys": [],
+    "payload_decoded_correctly": true,
+    "expected": "The caller's options dictionary remains unchanged",
+    "passed": true,
+    "exit_code": 0,
+    "commit": "3d4d82248f1120c87f1f4e0e8793eaa1d54843a6",
+    "stderr": ""
+  }
+}
